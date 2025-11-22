@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Mochii</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;500&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body {
+margin: 0;
+padding: 0;
+background: linear-gradient(-45deg,#FFC371,#FF5F6D,#ffc3a0,#ffafbd);
+background-size:400% 400%;
+animation: warm 10s ease infinite;
+font-family: "Poppins", sans-serif;
+}
+@keyframes warm {
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.screen { text-align:center; padding:50px; }
+.hidden{ display:none; }
+
+h1{
+font-family:"Fredoka One";
+font-size:3rem;
+color:white;
+text-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.cards-container{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.card{
+width:180px;
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,0.3);
+backdrop-filter:blur(10px);
+font-size:1.5rem;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+.card:hover{
+transform:scale(1.1);
+background:rgba(255,255,255,0.5);
+color:#FF5F6D;
+}
+
+.section-title{
+font-family:"Fredoka One";
+font-size:2.5rem;
+color:white;
+margin-bottom:30px;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.polaroid{
+background:white;
+width:230px;
+padding:15px 15px 50px;
+border-radius:5px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+.polaroid:hover{
+transform:scale(1.1);
+}
+
+.polaroid img, video{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:5px;
+background:#eee;
+}
+
+.caption{
+font-family:"Dancing Script";
+font-size:1.4rem;
+margin-top:10px;
+}
+
+button{
+margin-top:40px;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+font-size:1.2rem;
+font-weight:bold;
+cursor:pointer;
+background:white;
+color:#FF5F6D;
+transition:.3s;
+}
+button:hover{
+transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME SCREEN -->
+<div id="home-screen" class="screen">
+<h1>HAPPY BIRTHDAY MOCHII 🌻❤️</h1>
+<div class="cards-container">
+<div class="card" onclick="show('memories')">📷 Memories</div>
+<div class="card" onclick="alert('Writings coming soon ❤️')">📝 Writings</div>
+</div>
+</div>
+
+<!-- MEMORY SCREEN -->
+<div id="memories" class="screen hidden">
+<h2 class="section-title">Best Memories...</h2>
+
+<div class="gallery">
+
+<div class="polaroid">
+<img src="img1.jpg">
+<div class="caption">Mini Mochii 💕✨</div>
+</div>
+
+<div class="polaroid">
+<img src="img2.jpg">
+<div class="caption">Swinging through life 🦋</div>
+</div>
+
+<div class="polaroid">
+<img src="img3.jpg">
+<div class="caption">Iconic 🤘⚡</div>
+</div>
+
+<div class="polaroid">
+<img src="img4.png">
+<div class="caption">Partners in Crime 🕵️‍♀️✨</div>
+</div>
+
+<div class="polaroid">
+<img src="img5.jpg">
+<div class="caption">Blurry but cute 🤪</div>
+</div>
+
+<div class="polaroid">
+<img src="img6.jpg">
+<div class="caption">Too cool 😎✨</div>
+</div>
+
+<div class="polaroid">
+<video controls>
+<source src="video1.mp4" type="video/mp4" />
+</video>
+<div class="caption">Future Cricket Legend 🏆</div>
+</div>
+
+<div class="polaroid">
+<img src="img7.jpg">
+<div class="caption">Dynamic Duo 💅✨</div>
+</div>
+</div>
+
+<button onclick="show('home-screen')">⬅ Back</button>
+</div>
+
+<script>
+function show(id){
+document.querySelectorAll(".screen").forEach(s=>s.classList.add("hidden"));
+document.getElementById(id).classList.remove("hidden");
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
